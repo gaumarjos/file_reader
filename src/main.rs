@@ -1,5 +1,5 @@
-//use std::fs::File;
-//use std::io::{BufRead, BufReader};
+use std::fs::File;
+use std::io::{BufRead, BufReader};
 use std::env;
 
 
@@ -10,10 +10,7 @@ fn main() {
 
     println!("Opening file {}", filename);
 
-/* 
-    println!("File reader");
-
-    let file = File::open("non_existent_file.txt");
+    let file = File::open(filename);
     let file = match file {
         Ok(file) => file,
         Err(error) => {
@@ -37,5 +34,5 @@ fn main() {
             }
         }
     }
-    */
+
 }
